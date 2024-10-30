@@ -21,8 +21,8 @@ if (rispOpz == 1):
     mycursor.execute("USE Animali")
     Nome = input("Inserisci il nome: ")
     Razza = input("Inserisci la razza: ")
-    Peso = input("Inserisci il peso: ")
-    Eta = input("Inserisci l'età: ")
+    Peso = int(input("Inserisci il peso: "))
+    Eta = int(input("Inserisci l'età: "))
     sql = "INSERT INTO Mammiferi (Nome_Proprio, Razza, Peso, Eta) VALUES (%s, %s,%s,%s)"
     val = (Nome, Razza, Peso, Eta)
     mycursor.execute(sql, val)
