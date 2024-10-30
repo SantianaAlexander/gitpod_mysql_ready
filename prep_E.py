@@ -10,10 +10,9 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-sql = "INSERT INTO Mammiferi (Nome_Proprio, Razza, Peso, Eta) VALUES (%s, %s,%s,%s)"
-val = [('Nala', 'Gatto Persiano', 5, 1), ('Fufy', 'Labrador ', 30, 5), ('Oliver', 'Bulldog', 28, 4), ('Charlie', 'Gatto Europeo', 5, 2), ('Giucas', 'Shih Tzu', 6, 1)]
-mycursor.executemany(sql, val)
+mycursor.execute("SELECT * FROM Mammiferi WHERE Peso > 2")
 
-mydb.commit()
+myresult = mycursor.fetchall()
 
-print(mycursor.rowcount, "record inserted.")
+for x in myresult:
+  print(x)
