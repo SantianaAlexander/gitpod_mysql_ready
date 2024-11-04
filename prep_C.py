@@ -1,3 +1,4 @@
+#PREPARAZIONE ALLA VERIFICA C
 import mysql.connector
 
 mydb = mysql.connector.connect(

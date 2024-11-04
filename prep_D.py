@@ -1,4 +1,4 @@
-#PREPARAZIONE ALLA VERIFICA B
+#PREPARAZIONE ALLA VERIFICA D
 import mysql.connector
 
 mydb = mysql.connector.connect(
