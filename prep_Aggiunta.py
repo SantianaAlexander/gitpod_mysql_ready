@@ -11,6 +11,9 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 app = Flask(__name__)
 
+@app.route("/")
+def hello():
+    return "Hello, World!"
 
 @app.route('/mammiferi', methods=['GET'])
 def get_mammiferi():
